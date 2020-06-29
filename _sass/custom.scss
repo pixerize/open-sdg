@@ -1,6 +1,21 @@
-/**
- * custom.scss
- *
- * This file left blank intentionally. Implementations of Open SDG can use
- * a similarly named file for custom styles.
- */
+.landing-page{
+    h2{
+        padding: 15px 0;
+    }
+
+    .red-underline{
+        border-bottom: 3px solid #C5192D;
+    }
+
+    .green-underline{
+        border-bottom: 3px solid #4c9f38;
+    }
+
+    .blue-underline{
+        border-bottom: 3px solid #00689d;
+    }
+
+    .yellow-underline{
+        border-bottom: 3px solid #fcc30b;
+    }
+}
