@@ -1,0 +1,63 @@
+{% include head.html %}
+{% include header.html %}
+<div id="main-content" class="container landing-page" role="main">
+
+    {% if site.frontpage_introduction_banner %}
+    <div class="site-intro spacer medium">
+        <h1>{{ site.frontpage_introduction_banner.title | t }}</h1>
+        <p class="lead-copy">{{ site.frontpage_introduction_banner.description | t }}</p>
+    </div>
+    {% endif %}
+
+    <h2 class="spacer medium red-underline">The 17 Goals</h2>
+
+    <p class="spacer medium">The sustainable development goals are a set of 17 goals</p>
+
+    <div class="goal-tiles">
+    {% for goal in page.goals %}
+        {% cycle 'add row' : '<div class="row no-gutters">', '', '', '', '', '' %}
+            <div class="col-xs-2 col-sm-1">
+                <a href="./{{ goal.number }}/">
+                  <img src="{{ goal.icon }}" id="goal-{{ goal.number }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" />
+              </a>
+            </div>
+        {% cycle 'end row' : '', '', '', '', '', '</div>' %}
+    {% endfor %}
+    {% comment %}
+        If there were exactly 17 goals, "pad" it with 1 more, to make it come
+        out more symmetrically.
+    {% endcomment %}
+    {% if page.goals.size == 17 %}
+        <div class="col-xs-2 col-sm-1">
+            <img src="{{ site.goal_image_base }}/{{ page.language }}/18.png" id="goal-18" alt="The Global Goals for Sustainable Development" />
+        </div>
+    {% endif %}
+    </div>
+    </div>
+    <div class="sections row">
+        <div class="section col-md-4">
+            <h2 class="green-underline">Download all data</h2>
+            <div class="section-content">
+                {% include components/download-all-data.html %}
+            </div>
+        </div>
+        <div class="section col-md-4">
+            <h2 class="blue-underline">Useful resources</h2>
+            <div class="section-content">
+                <a href="/">Useful resource</a><br/>
+                <a href="/">Useful resource</a><br/>
+                <a href="/">Useful resource</a><br/>
+                <a href="/">Useful resource</a><br/>
+                <a href="/">Useful resource</a><br/>
+            </div>
+        </div>
+        <div class="section col-md-4">
+            <h2 class="yellow-underline">Publications</h2>
+            <div class="section-content">
+                <a href="https://www.ons.gov.uk/economy/environmentalaccounts/articles/sustainabledevelopmentgoalstakingstockprogressandpossibilities/november2019">2019 annual update</a><br/>
+                <a href="https://www.gov.uk/government/publications/uks-voluntary-national-review-of-the-sustainable-development-goals">UK SDG Voluntary National Review</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% include footer.html %}
