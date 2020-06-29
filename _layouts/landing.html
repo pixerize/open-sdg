@@ -13,15 +13,13 @@
 
     <p class="spacer medium">The sustainable development goals are a set of 17 goals</p>
 
-    <div class="goal-tiles">
+    <div class="goal-tiles row no-gutters">
     {% for goal in page.goals %}
-        {% cycle 'add row' : '<div class="row no-gutters">', '', '', '', '', '' %}
-            <div class="col-xs-2 col-sm-1">
-                <a href="./{{ goal.number }}/">
-                  <img src="{{ goal.icon }}" id="goal-{{ goal.number }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" />
-                </a>
-            </div>
-        {% cycle 'end row' : '', '', '', '', '', '</div>' %}
+        <div class="col-xs-2 col-sm-1">
+            <a href="./{{ goal.number }}/">
+                <img src="{{ goal.icon }}" id="goal-{{ goal.number }}" alt="{{ goal.short | escape }} - {{ page.t.general.goal }} {{ goal.number }}" />
+            </a>
+        </div>
     {% endfor %}
     </div>
     </div>
