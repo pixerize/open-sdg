@@ -122,6 +122,16 @@ frontpage_introduction_banner:
   title: My frontpage introduction banner title
   description: My frontpage introduction banner description
 
+frontpage_sections:
+  sections:
+    - title: Download all data
+      component: download-all-data.html
+    - title: Publications
+      component: publications_section.html
+    - title: Text section
+      underline_color: "#fcc30b"
+      component: resources_section.html
+    
 disclaimer:
   phase: header.alpha
   message: custom.disclaimer_message

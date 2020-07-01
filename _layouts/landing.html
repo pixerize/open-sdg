@@ -22,35 +22,24 @@
         </div>
     {% endfor %}
     </div>
+
+    {% if site.frontpage_sections %}
     <div class="sections row">
+        {% for each_section in site.frontpage_sections.sections %}
         <div class="section col-md-4">
-            <h2 class="green-underline">Download all data</h2>
+            {% if each_section.underline_color %}
+                {% assign underline_color = each_section.underline_color %}
+            {% else %}
+                {% assign underline_color = "red" %}
+            {% endif %}
+            <h2 style="border-bottom: 2px solid #4c9f38; {% if each_section.underline_color %} border-bottom: 2px solid {{ underline_color }}{% endif %}">{{ each_section.title }}</h2>
             <div class="section-content">
-                {% include components/download-all-data.html %}
+                {% include components/{{ each_section.component }} %}
             </div>
         </div>
-        <div class="section col-md-4">
-            <h2 class="blue-underline">Useful resources</h2>
-            <div class="section-content">
-                <ul>
-                    <li><a href="#">Useful resource</a></li>
-                    <li><a href="#">Useful resource</a></li>
-                    <li><a href="#">Useful resource</a></li>
-                    <li><a href="#">Useful resource</a></li>
-                    <li><a href="#">Useful resource</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="section col-md-4">
-            <h2 class="yellow-underline">Publications</h2>
-            <div class="section-content">
-                <ul>
-                    <li><a href="#">Publication</a></li>
-                    <li><a href="#">Publication</a></li>
-                    <li><a href="#">Publication</a></li>
-                </ul>
-            </div>
-        </div>
+        {% endfor %}
     </div>
+    {% endif %}
+    
 </div>
 {% include footer.html %}

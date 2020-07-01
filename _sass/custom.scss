@@ -42,3 +42,12 @@
         }
     }
 }
+
+body.contrast-high{
+    .red-underline,
+    .green-underline,
+    .blue-underline,
+    .yellow-underline{
+        border-bottom: 2px solid white;
+    }
+}
