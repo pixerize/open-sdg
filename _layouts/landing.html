@@ -32,7 +32,7 @@
             {% else %}
                 {% assign underline_color = "red" %}
             {% endif %}
-            <h2 style="border-bottom: 2px solid #4c9f38; {% if each_section.underline_color %} border-bottom: 2px solid {{ underline_color }}{% endif %}">{{ each_section.title }}</h2>
+            <h2 style="border-bottom: 2px solid darkgrey; {% if each_section.underline_color %} border-bottom: 2px solid {{ underline_color }}{% endif %}">{{ each_section.title }}</h2>
             <div class="section-content">
                 {% include components/{{ each_section.component }} %}
             </div>
