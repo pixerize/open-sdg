@@ -1,0 +1,21 @@
+.landing-page{
+    h2{
+        padding: 15px 0;
+    }
+
+    h2.red-underline{
+        border-bottom: 2px solid #C5192D;
+    }
+
+    .goal-tiles{
+        .goal-tile{
+            width: 120px;
+        }
+    }
+}
+
+body.contrast-high{
+    .landing-page h2{
+        border-bottom: 2px solid white !important;
+    }
+}
