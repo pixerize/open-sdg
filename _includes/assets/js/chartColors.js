@@ -25,7 +25,8 @@ opensdg.chartColors = function(indicatorId) {
                   'sdg':['e5243b', 'dda63a', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','fd9d24','bf8b2e','3f7e44','0a97d9','56c02b','00689d','19486a'],
                   'goal': this.goalColors[this.goalNumber-1],
                   'custom': customColorList,
-                  'accessible': ['cd7a00', '339966', '9966cc', 'ff0028', '1be8e4', '054ce6']};
+                  'accessible': ['cd7a00', '339966', '9966cc', 'ff0028', '1be8e4', '054ce6'],
+                  'popdata': ['00c0ff', 'cc4aff', '00c161', 'ff0028', '0050ff', 'ffa500']};
   if(Object.keys(this.colorSets).indexOf(colorSet) == -1 || (colorSet=='custom' && customColorList == null)){
     return this.colorSets['default'];
   }
