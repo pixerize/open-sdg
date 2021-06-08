@@ -1,10 +1,5 @@
 <h1>Change Log</h1>
 
-## Not released
-
-* Darker color for main nav #1142
-* Move goal header to include file #1128
-
 ## 1.3.0
 
 * Configurable chart headline colors #1145

@@ -58,7 +58,6 @@ const driver = new mink.Mink({
     "chart has no data": "#selectionsChart.chart-has-no-data canvas",
     "breadcrumbs": ".breadcrumb",
     "table value": "#tableview tbody .table-value",
-    "main logo": ".navbar-brand img",
   }
 });
 
