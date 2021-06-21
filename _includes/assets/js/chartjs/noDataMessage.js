@@ -24,7 +24,7 @@ Chart.plugins.register({
 
       // @deprecated start
       if (typeof translations.indicator.data_not_available === 'undefined') {
-        translations.indicator.data_not_available = 'This data is not available. Please choose alternative data to display.';
+        translations.indicator.data_not_available = 'This data is not available. Please choose additional sub-categories.';
       }
       // @deprecated end
 
