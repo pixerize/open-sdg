@@ -529,7 +529,7 @@ var indicatorView = function (model, options) {
     });
 
     this.createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload');
-    this.createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
+   // this.createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
     this.createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#chartSelectionDownload');
 
     $("#btnSave").click(function() {
@@ -721,7 +721,7 @@ var indicatorView = function (model, options) {
     this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
     $('#tableSelectionDownload').empty();
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload');
-    this.createSourceButton(chartInfo.shortIndicatorId, '#tableSelectionDownload');
+  //  this.createSourceButton(chartInfo.shortIndicatorId, '#tableSelectionDownload');
     this.createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#tableSelectionDownload');
   };
 
@@ -841,18 +841,18 @@ var indicatorView = function (model, options) {
     }
   }
 
-  this.createSourceButton = function(indicatorId, el) {
-    var gaLabel = 'Download Source CSV: ' + indicatorId;
-    $(el).append($('<a />').text(translations.indicator.download_source)
-    .attr(opensdg.autotrack('download_data_source', 'Downloads', 'Download CSV', gaLabel))
-    .attr({
-      'href': opensdg.remoteDataBaseUrl + '/data/' + indicatorId + '.csv',
-      'download': indicatorId + '.csv',
-      'title': translations.indicator.download_source_title,
-      'class': 'btn btn-primary btn-download',
-      'tabindex': 0
-    }));
-  }
+  // this.createSourceButton = function(indicatorId, el) {
+  //   var gaLabel = 'Download Source CSV: ' + indicatorId;
+  //   $(el).append($('<a />').text(translations.indicator.download_source)
+  //   .attr(opensdg.autotrack('download_data_source', 'Downloads', 'Download CSV', gaLabel))
+  //   .attr({
+  //     'href': opensdg.remoteDataBaseUrl + '/data/' + indicatorId + '.csv',
+  //     'download': indicatorId + '.csv',
+  //     'title': translations.indicator.download_source_title,
+  //     'class': 'btn btn-primary btn-download',
+  //     'tabindex': 0
+  //   }));
+  // }
 
   this.createIndicatorDownloadButtons = function(indicatorDownloads, indicatorId, el) {
     if (indicatorDownloads) {
