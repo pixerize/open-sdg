@@ -286,6 +286,7 @@ var indicatorModel = function (options) {
     // restrict count if it exceeds the limit:
     if(datasets.length > this.maxDatasetCount) {
       datasetCountExceedsMax = true;
+      $("html, body").animate({ scrollTop: 0 }, "slow");
     }
 
     this.updateChartTitle();
