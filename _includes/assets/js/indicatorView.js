@@ -536,7 +536,7 @@ var indicatorView = function (model, options) {
       var filename = chartInfo.indicatorId + '.png',
           element = document.getElementById('chart-canvas'),
           footer = document.getElementById('selectionChartFooter'),
-          height = element.clientHeight + 50 + ((footer) ? footer.clientHeight : 0),
+          height = element.clientHeight + 100 + ((footer) ? footer.clientHeight : 0),
           width = element.clientWidth + 25;
       var options = {
         // These options fix the height, width, and position.
