@@ -56,6 +56,8 @@ var indicatorView = function (model, options) {
 
     if(view_obj._model.showData) {
 
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+
       $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();
 
       if(!view_obj._chartInstance) {
