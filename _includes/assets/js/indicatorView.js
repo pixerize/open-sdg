@@ -807,9 +807,9 @@ var indicatorView = function (model, options) {
         hasData = newDatasets.length > 0,
         dataAdded = newDatasets.length > oldDatasets.length,
         dataRemoved = newDatasets.length < oldDatasets.length,
-        getDatasetLabel = function(dataset) { return dataset.label; },
-        oldLabels = oldDatasets.map(getDatasetLabel),
-        newLabels = newDatasets.map(getDatasetLabel);
+        // getDatasetLabel = function(dataset) { return dataset.label; },
+        // oldLabels = oldDatasets.map(getDatasetLabel),
+        // newLabels = newDatasets.map(getDatasetLabel);
 
     if (!hasData) {
       status = translations.indicator.announce_data_not_available;
